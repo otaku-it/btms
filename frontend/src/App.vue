@@ -178,14 +178,21 @@ onBeforeUnmount(() => {
         </div>
       </section>
 
-      <section class="intro section" id="story">
-        <div class="section-heading reveal"><p class="eyebrow">一村 · 一水 · 一方山</p><h2>名字里，藏着这里最初的风景</h2></div>
-        <div class="intro-grid">
-          <div class="intro-copy reveal">
-            <p class="lead">{{ content.profile.introLead }}</p><p>{{ content.profile.introBody }}</p>
-            <a class="text-link" href="#gallery">看见碧潭实景 <span aria-hidden="true">→</span></a>
+      <section class="story-showcase" id="story" aria-labelledby="story-title">
+        <div class="story-head reveal">
+          <h2 id="story-title">山水有痕，村落有声</h2>
+          <p>这里不只是一处目的地，也是一种温柔的生活提案：看山、听水、喝一盏茶，再和村里人聊几句家常。</p>
+        </div>
+        <div class="story-grid">
+          <article class="story-feature reveal">
+            <img :src="content.profile.introImageUrl || '/assets/riverwalk.webp'" alt="碧潭村公信河畔整洁的亲水步道" loading="lazy" />
+            <div class="story-feature-shade"></div>
+            <div class="story-feature-copy"><h3>碧潭村概况</h3><p>徽州古韵与当代乡村生活在此交汇，青山作屏，溪流为伴。</p></div>
+          </article>
+          <div class="story-side">
+            <article class="story-card reveal"><span class="story-card-orb"></span><h3>白墙黛瓦</h3><p>从老屋的木格窗，到巷口的一盏暖灯，读懂徽州建筑里的克制与留白。</p><a href="#encyclopedia">阅读村落故事 <span aria-hidden="true">↗</span></a></article>
+            <article class="story-card reveal"><span class="story-card-orb"></span><h3>一盏徽州茶</h3><p>春日茶园、雨后竹林，把山野的清气带回桌边，也带回心里。</p><a href="#seasons">看四季风物 <span aria-hidden="true">↗</span></a></article>
           </div>
-          <figure class="feature-image reveal"><img :src="content.profile.introImageUrl || '/assets/riverwalk.webp'" alt="碧潭村公信河畔整洁的亲水步道" loading="lazy" /><figcaption><span>01</span> 公信河畔 · 碧潭村实景</figcaption></figure>
         </div>
       </section>
 
